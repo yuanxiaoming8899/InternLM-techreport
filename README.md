@@ -1,95 +1,69 @@
-# InternLM
-
-[InternLM](https://internlm.org) is a multilingual large language model jointly developed by Shanghai AI Lab and SenseTime (with equal contribution), in collaboration with the Chinese University of Hong Kong, Fudan University, and Shanghai Jiaotong University. 
-
-**Technical report**: [[PDF]](InternLM.pdf)
-
-**Note:** Please right click the link above to directly download the PDF file.
-
----
-
-## Abstract
-
-We present InternLM, a multilingual foundational language model with 104B parameters. InternLM is pre-trained on a large corpora with 1.6T tokens with a multi-phase progressive process, and then fine-tuned to align with human preferences. We also developed a training system called Uniscale-LLM for efficient large language model training. The evaluation on a number of benchmarks shows that InternLM achieves state-of-the-art performance in multiple aspects, including knowledge understanding, reading comprehension, mathematics, and coding. With such well-rounded capabilities, InternLM achieves outstanding performances on comprehensive exams, including MMLU, AGIEval, C-Eval and GAOKAO-Bench, without resorting to external tools. On these benchmarks, InternLM not only significantly outperforms open-source models, but also obtains superior performance compared to ChatGPT. Also, InternLM demonstrates excellent capability of understanding Chinese language and Chinese culture, which makes it a suitable foundation model to support Chinese-oriented language applications. This manuscript gives a detailed study of our results, with benchmarks and examples across a diverse set of knowledge domains and tasks.
-
-## Main Results
-
-As latest large language models begin to exhibit human-level intelligence, 
-exams designed for humans, such as China's college entrance examination and US SAT and GRE, 
-are considered as important means to evaluate language models. 
-Note that in its technical report on GPT-4, OpenAI tested GPT-4
-through exams across multiple areas and used the exam scores as the key results. 
-
-We tested InternLM in comparison with others on four comprehensive exam benchmarks,
-as below:
-
-- **MMLU**: 
-A multi-task benchmark constructed based on various US exams, 
-which covers elementary mathematics, physics, chemistry, computer science, American history, law, economics, diplomacy, etc.
-
-- **AGIEval**:
-A benchmark developed by Microsoft Research to evaluate the ability of language models through human-oriented exams, which comprises 19 task sets derived from various exams in China and the United States, e.g., the college entrance exams and lawyer qualification exams in China, and SAT, LSAT, GRE and GMAT in the United States. 
-Among the 19 task sets, 9 sets are based on the Chinese college entrance exam (Gaokao), which we single out as an important collection named **AGIEval (GK)**.
-
-- **C-Eval**:
-A comprehensive benchmark devised to evaluate Chinese language models, which
-contains nearly 14,000 questions in 52 subjects, covering mathematics, physics, 
-chemistry, biology, history, politics, computer and other disciplines, as well as 
-professional exams for civil servants, certified accountants, lawyers, and doctors.
-
-- **GAOKAO-Bench**:
-A comprehensice benchmark based on the Chinese college entrance exams, which 
-include all subjects of the college entrance exam. It provide different types 
-of questions, including multiple-choices, blank filling, and QA.
-For conciseness, we call this benchmark simply as **Gaokao**.
-
-![Exam benchmarks](https://internlm.oss-cn-shanghai.aliyuncs.com/exam.png)
-
-### Results on MMLU
-
-![MMLU](https://internlm.oss-cn-shanghai.aliyuncs.com/MMLU.png)
-
-### Results on AGIEval
-
-![AGIEval](https://internlm.oss-cn-shanghai.aliyuncs.com/AGIEval.png)
-
-### Results on C-Eval
-
-C-Eval has a [live leaderboard](https://cevalbenchmark.com/static/leaderboard.html). Below is a screenshot that shows all
-the results (as of 2023-06-01).
-
-![C-Eval leaderboard](https://internlm.oss-cn-shanghai.aliyuncs.com/ceval-leaderboard.png)
-
-![C-Eval](https://internlm.oss-cn-shanghai.aliyuncs.com/C-Eval.png)
-
-### Results on GAOKAO-Benchmark
-
-![GAOKAO-Benchmark](https://internlm.oss-cn-shanghai.aliyuncs.com/gaokao.png)
-
-## Benchmarks in Specific Aspects
-
-We also tested InternLM in comparison with others in multiple aspects:
-
--  Knowledge QA: TriviaQA and NaturalQuestions.
--  Reading Comprehension: RACE
--  Chinese Understanding: CLUE and FewCLUE
--  Mathematics: GSM8k and MATH
--  Coding: HumanEval and MBP
-
-Please refer to our [technical report](InternLM.pdf) for detailed results.
-
-We are working on more tests, and will share new results as our work proceeds.
-
-## Citation
-
-You can cite this technical report like this:
-
-```BibTeX
-@misc{2023internlm,
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实习生LM</font></font></h1><a id="user-content-internlm" class="anchor" aria-label="永久链接：实习生LM" href="#internlm"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://internlm.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">InternLM</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是上海人工智能实验室与商汤科技（同等贡献）联合香港中文大学、复旦大学、上海交通大学合作开发的多语言大语言模型。</font></font></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">技术报告</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><a href="/InternLM/InternLM-techreport/blob/main/InternLM.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">[PDF]</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注：</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请右键点击上面的链接直接下载PDF文件。</font></font></p>
+<hr>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">抽象的</font></font></h2><a id="user-content-abstract" class="anchor" aria-label="永久链接：摘要" href="#abstract"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们提出了 InternLM，一种具有 104B 参数的多语言基础语言模型。 InternLM 在具有 1.6T 代币的大型语料库上进行了多阶段渐进过程的预训练，然后进行微调以符合人类偏好。我们还开发了名为 Uniscale-LLM 的训练系统，用于高效的大语言模型训练。多项基准测试的评估表明，InternLM在知识理解、阅读理解、数学和编码等多个方面均达到了state-of-the-art的表现。凭借如此全面的功能，InternLM 在不借助外部工具的情况下，在 MMLU、AGIEval、C-Eval 和 GAOKAO-Bench 等综合考试中取得了出色的表现。在这些基准测试中，InternLM 不仅显着优于开源模型，而且与 ChatGPT 相比也获得了更优越的性能。此外，InternLM表现出出色的理解汉语和中国文化的能力，这使其成为支持面向汉语的语言应用的合适基础模型。这份手稿详细研究了我们的结果，并提供了跨不同知识领域和任务的基准和示例。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">主要结果</font></font></h2><a id="user-content-main-results" class="anchor" aria-label="永久链接：主要结果" href="#main-results"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">随着最新的大型语言模型开始展现出人类水平的智能，为人类设计的考试，如中国的高考、美国的SAT和GRE，被认为是评估语言模型的重要手段。需要注意的是，OpenAI 在 GPT-4 的技术报告中通过跨多个领域的考试对 GPT-4 进行了测试，并以考试成绩作为关键结果。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们在四个综合考试基准上对 InternLM 进行了与其他人的比较，如下所示：</font></font></p>
+<ul dir="auto">
+<li>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MMLU</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：根据美国各种考试构建的多任务基准，涵盖基础数学、物理、化学、计算机科学、美国历史、法律、经济、外交等。</font></font></p>
+</li>
+<li>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AGIEval</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：微软研究院开发的一个基准，通过人性化的考试来评估语言模型的能力，其中包含源自中国和美国各种考试的 19 个任务集，例如中国的高考、律师资格考试、以及美国的 SAT、LSAT、GRE 和 GMAT。在这19个任务集中，有9个任务集是基于中国高考的，我们将其作为一个重要的集合，命名为</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AGIEval（GK）</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+</li>
+<li>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C-Eval</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：用于评估汉语语言模型的综合基准，包含52个学科近14000道题，涵盖数学、物理、化学、生物、历史、政治、计算机等学科，以及公务员专业考试，注册会计师、律师和医生。</font></font></p>
+</li>
+<li>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GAOKAO-Bench</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：基于中国高考的综合基准，包括高考所有科目。它提供不同类型的问题，包括多项选择、填空和问答。为了简洁起见，我们将此基准简称为</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高考</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+</li>
+</ul>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ecd411f38668f2d933b23cd19c5bb4eebeef34cc99b482bda6bf2ccbe52a10e1/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f6578616d2e706e67"><img src="https://camo.githubusercontent.com/ecd411f38668f2d933b23cd19c5bb4eebeef34cc99b482bda6bf2ccbe52a10e1/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f6578616d2e706e67" alt="考试基准" data-canonical-src="https://internlm.oss-cn-shanghai.aliyuncs.com/exam.png" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MMLU 的结果</font></font></h3><a id="user-content-results-on-mmlu" class="anchor" aria-label="永久链接：MMLU 的结果" href="#results-on-mmlu"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ff3069414ef500d3150d0b14e4cdabbe663af6682b022675e8f1670249400312/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f4d4d4c552e706e67"><img src="https://camo.githubusercontent.com/ff3069414ef500d3150d0b14e4cdabbe663af6682b022675e8f1670249400312/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f4d4d4c552e706e67" alt="MMLU" data-canonical-src="https://internlm.oss-cn-shanghai.aliyuncs.com/MMLU.png" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AGIEval 的结果</font></font></h3><a id="user-content-results-on-agieval" class="anchor" aria-label="永久链接：AGIEval 的结果" href="#results-on-agieval"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/05fed0976cfe7d407ef85a6230dc3d18d6389799d529cc80ce9e625ca35749c0/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f4147494576616c2e706e67"><img src="https://camo.githubusercontent.com/05fed0976cfe7d407ef85a6230dc3d18d6389799d529cc80ce9e625ca35749c0/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f4147494576616c2e706e67" alt="AGIE值" data-canonical-src="https://internlm.oss-cn-shanghai.aliyuncs.com/AGIEval.png" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C-Eval 结果</font></font></h3><a id="user-content-results-on-c-eval" class="anchor" aria-label="永久链接：C-Eval 结果" href="#results-on-c-eval"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C-Eval 有一个</font></font><a href="https://cevalbenchmark.com/static/leaderboard.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实时排行榜</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。下面是显示所有结果的屏幕截图（截至 2023 年 6 月 1 日）。</font></font></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/2a39aa8f735574b019c1fbe162be10717bd960bfb676d062376e18b137a729c2/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f636576616c2d6c6561646572626f6172642e706e67"><img src="https://camo.githubusercontent.com/2a39aa8f735574b019c1fbe162be10717bd960bfb676d062376e18b137a729c2/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f636576616c2d6c6561646572626f6172642e706e67" alt="C-评估排行榜" data-canonical-src="https://internlm.oss-cn-shanghai.aliyuncs.com/ceval-leaderboard.png" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/27956929b4586cf91f4a47c71de154fef2b60719621d9b118a91a52bc547fc57/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f432d4576616c2e706e67"><img src="https://camo.githubusercontent.com/27956929b4586cf91f4a47c71de154fef2b60719621d9b118a91a52bc547fc57/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f432d4576616c2e706e67" alt="C-评估" data-canonical-src="https://internlm.oss-cn-shanghai.aliyuncs.com/C-Eval.png" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GAOKAO-Benchmark 结果</font></font></h3><a id="user-content-results-on-gaokao-benchmark" class="anchor" aria-label="永久链接：GAOKAO-Benchmark 的结果" href="#results-on-gaokao-benchmark"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ab6e7b2176030174ea9160c755af1d86ded7add5569fe9b73754496158873117/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f67616f6b616f2e706e67"><img src="https://camo.githubusercontent.com/ab6e7b2176030174ea9160c755af1d86ded7add5569fe9b73754496158873117/68747470733a2f2f696e7465726e6c6d2e6f73732d636e2d7368616e676861692e616c6979756e63732e636f6d2f67616f6b616f2e706e67" alt="高考-基准" data-canonical-src="https://internlm.oss-cn-shanghai.aliyuncs.com/gaokao.png" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">具体方面的基准</font></font></h2><a id="user-content-benchmarks-in-specific-aspects" class="anchor" aria-label="永久链接：特定方面的基准" href="#benchmarks-in-specific-aspects"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们还对 InternLM 进行了多方面的对比测试：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">知识 QA：TriviaQA 和 NaturalQuestions。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阅读理解：种族</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中国理解：CLUE 和 FewCLUE</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数学：GSM8k 和数学</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编码：HumanEval 和 MBP</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">详细结果</font><font style="vertical-align: inherit;">请参阅我们的</font></font><a href="/InternLM/InternLM-techreport/blob/main/InternLM.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">技术报告。</font></font></a><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们正在开展更多测试，并将随着工作的进展分享新的结果。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">引文</font></font></h2><a id="user-content-citation" class="anchor" aria-label="永久链接：引文" href="#citation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以这样引用这份技术报告：</font></font></p>
+<div class="highlight highlight-text-bibtex notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">@misc</span>{<span class="pl-en">2023internlm</span>,
+    <span class="pl-s">title</span>=<span class="pl-s"><span class="pl-pds">{</span>InternLM: A Multilingual Language Model with Progressively Enhanced Capabilities<span class="pl-pds">}</span></span>,
+    <span class="pl-s">author</span>=<span class="pl-s"><span class="pl-pds">{</span>InternLM Team<span class="pl-pds">}</span></span>,
+    <span class="pl-s">howpublished</span> = <span class="pl-s"><span class="pl-pds">{</span>\url{https://github.com/InternLM/InternLM-techreport}<span class="pl-pds">}</span></span>,
+    <span class="pl-s">year</span>=<span class="pl-s"><span class="pl-pds">{</span>2023<span class="pl-pds">}</span></span>
+}</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="@misc{2023internlm,
     title={InternLM: A Multilingual Language Model with Progressively Enhanced Capabilities},
     author={InternLM Team},
     howpublished = {\url{https://github.com/InternLM/InternLM-techreport}},
     year={2023}
-}
-```
-
+}" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+</article></div>
